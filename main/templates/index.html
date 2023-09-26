@@ -28,13 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -373,7 +366,7 @@
 
         <div class="section-title">
           <h2>Portfolio Projects</h2>
-          <p>This is my portfolio project you can check them in github</p>
+          <p>This is my portfolio projects and most of them you can check sourece code in github but few some of them have no click able link because of privecy</p>
         </div>
 
         <div class="row">
@@ -425,7 +418,7 @@
                 </svg>
                 <i class="bx bx-layer"></i>
               </div>
-              <h4><a href="">Machine Learning Approach to Analysis of Sentiment Based on Electronics Product Reviews in Bengali.</a></h4>
+              <h4><a href="https://github.com/imranpciu/Machine-Learning-Approach-to-Analysis-of-Sentiment-Based-on-Electronics-Product-Reviews-in-Bengali.">Machine Learning Approach to Analysis of Sentiment Based on Electronics Product Reviews in Bengali.</a></h4>
               <p>the purpose of this project is to understand the idea of what is written in every comment and suggest how many percentage positive, slightly positive, negative, slightly negative, or neutral review get a particular product</p>
             </div>
           </div>
@@ -438,7 +431,7 @@
                 </svg>
                 <i class="bx bx-slideshow"></i>
               </div>
-              <h4><a href="">Django Web App for Text Sentiment Analysis</a></h4>
+              <h4><a href="https://github.com/imranpciu/sentiment_analysis_api">Django Web App for Text Sentiment Analysis</a></h4>
               <p>Developed a Django-based API using pre-trained models for accurate sentiment analysis of the text. Empowering users to analyze sentiment easily and efficiently.</p>
             </div>
           </div>
@@ -451,7 +444,7 @@
                 </svg>
                 <i class="bx bx-arch"></i>
               </div>
-              <h4><a href="">Wedding Invitations Template</a></h4>
+              <h4><a href="https://github.com/imranpciu/Wedding-Invitations-Template">Wedding Invitations Template</a></h4>
               <p>A Simple weeding invitations template using HTML, CSS, Botstrap, javascript to show my profeciency in frontend development</p>
             </div>
           </div>
@@ -489,7 +482,7 @@
                 <p>University of Michigan</p>
                 <div class="portfolio-links">
                   <a href="{% static 'assets/img/portfolio/certificate-1.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="https://www.coursera.org/account/accomplishments/verify/BVZT4AL5TDL3"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -503,7 +496,7 @@
                 <p>Google</p>
                 <div class="portfolio-links">
                   <a href="{% static 'assets/img/portfolio/certificate-2.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="https://www.coursera.org/account/accomplishments/verify/7UZTMV57W54Z"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -565,27 +558,28 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="{% url 'main:index' %}" method="post" role="form">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
             </form>
 
           </div>
@@ -601,13 +595,13 @@
   <footer id="footer">
     <div class="container">
       <h3>Muhammed Imran</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p> I am driven by a fervent commitment to innovation. I thrive in collaborative settings where teamwork fosters creativity.</p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/imranpciu" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/imran-pciu/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
         &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
